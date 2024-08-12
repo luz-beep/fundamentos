@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,x;
+    cout<< "ingrese la longitud de los lados en metros";
+    cin>>a;
+    x=a*a;
+    cout<<"su area del cuadrado es :"<<x;
+    
+
+    return 0;
+}
