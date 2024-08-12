@@ -1,0 +1,17 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+   float a,b,c,s,A;
+   cout<<"ingresar el valor de la base del triangulo: ";
+   cin>>a;
+   cout<<"ingresar el valor de un laso del triamgulo: ";
+   cin>>b;
+   cout<<"ingresar el valor de otro lado del triangulo: ";
+   cin>>c;
+   s=(a+b+c)/2;
+   A=sqrt(s*(s-a)*(s-b)*(s-c));
+   cout<< "el area del triangulo es:  "<<A;
+return 0;
+}
