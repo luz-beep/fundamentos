@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+using namespace std; 
+int main()
+{
+    
+     string nombre;
+     int t,h,s,d,s1;
+     
+      cout<<"cual es tu nombre : ";
+      cin>> nombre; 
+      cout<<"cuantas horas trabajas al mes:";
+      cin>>t;
+      cout<<"cuanto cobras por hora : ";
+      cin >> h ;
+      s=t*h ;
+      if (0>8272) 
+      {  
+           d=s*13/100 ;
+          s1=s-d;
+          cout<<s1 ;
+      }
+       else 
+       {
+           cout << s ;
+    return 0;
+}
