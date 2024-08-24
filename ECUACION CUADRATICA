@@ -1,0 +1,51 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    double x1, x2, a, b, x, c;
+    cout<<"Hola, escribe los valores para la ecuacion: ax2 + bx + c";
+    cout<<"\n";
+    cout<<"Cuanto vale a?";
+    cout<<"\n";
+    cin>>a;
+    if(a==0) 
+    {
+     cout<<"La ecuacion ax2 + bx + c NO EXISTE";
+    }
+    else {
+      cout<<"Cuanto vale b?";
+      cout<<"\n";
+      cin>>b;
+      cout<<"Cuanto vale c?";
+      cout<<"\n";
+      cin>>c;
+      if(b*b-4*a*c == 0) {
+          cout<<"El valor de x es igual a "<<-b/(2*a);
+          }
+      else {
+          if(b*b-4*a*c > 0) 
+          {
+          x1 = (-b+sqrt(b*b-4*a*c))/2*a;
+          x2 = (-b-sqrt(b*b-4*a*c))/2*a;
+          cout<<"El valor de x1 es "<<x1;
+          cout<<"\n";
+          cout<<"Y el de x2 es "<<x2;
+          }
+          else { 
+              x1 = (-b+sqrt(-(b*b-4*a*c)))/2*a;
+              x2 = (-b-sqrt(-(b*b-4*a*c)))/2*a;
+              cout<<"Las soluciones imaginarias son: x1 = "<<x1<<"i";
+              cout<<"\n";
+              cout<<"x2 = "<<x2<<"i";
+               }
+          }
+          }
+    
+    return 0;
+}
+
+
+ 
