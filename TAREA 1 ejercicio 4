@@ -1,0 +1,21 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    float x1, y1, x2, y2, distancia;
+    cout << "Ingrese la coordenada x del primer punto: ";
+    cin >> x1;
+    cout << "Ingrese la coordenada y del primer punto: ";
+    cin >> y1;
+    cout << "Ingrese la coordenada x del segundo punto: ";
+    cin >> x2;
+    cout << "Ingrese la coordenada y del segundo punto: ";
+    cin >> y2;
+    distancia = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
+    cout << "La distancia entre los dos puntos es " << distancia;
+
+    return 0;
+}
