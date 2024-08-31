@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int r;
+    double P, A ;
+    
+    cout << "Ingrese el radio de la circunferencia: ";
+    cin >> r;
+    P = 2 * 3.141592653 * r;
+    A = 3.141592653 * r * r;
+    cout << "El perimetro de la circuferencia es : " << P << " y el area  es : " << A;
+    
+    return 0;
+}
