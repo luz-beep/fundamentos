@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b;
+    cout << "Escriba primer numero entero: ";
+    cin >> a;
+    cout << "Escriba el segundo numero entero: ";
+    cin >> b;
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    cout << "El primer numero es " << a << " y el segundo es " << b;
+    
+    return 0;
+}
