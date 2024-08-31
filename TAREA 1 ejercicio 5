@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    
+    double x1, y1, x2, y2, x3, y3;
+    double A, B, C, xc, yc, r; 
+    
+    cout << "Ingrese la coordenada x1 del primer punto: ";
+    cin >> x1;
+    cout << "Ingrese la coordenada y1 del primer punto: ";
+    cin >> y1;
+
+    cout << "Ingrese la coordenada x2 del segundo punto: ";
+    cin >> x2;
+    cout << "Ingrese la coordenada y2 del segundo punto: ";
+    cin >> y2;
+
+    cout << "Ingrese la coordenada x3 del tercer punto: ";
+    cin >> x3;
+    cout << "Ingrese la coordenada y3 del tercer punto: ";
+    cin >> y3;
+
+    A = x1 * (y2 - y3) - y1 * (x2 - x3) + x2 * y3 - x3 * y2;
+    B = (x1 * x1 + y1 * y1) * (y3 - y2) + (x2 * x2 + y2 * y2) * (y1 - y3) + (x3 * x3 + y3 * y3) * (y2 - y1);
+    C = (x1 * x1 + y1 * y1) * (x2 - x3) + (x2 * x2 + y2 * y2) * (x3 - x1) + (x3 * x3 + y3 * y3) * (x1 - x2);
+
+    xc = -B / (2 * A);
+    yc = -C / (2 * A);
+    r = sqrt((xc - x1) * (xc - x1) + (yc - y1) * (yc - y1));
+
+
+    cout << "El centro de la circunferencia es: (" << xc << ", " << yc << ")" << endl;
+    cout << "El radio de la circunferencia es: " << r << endl;
+
+    return 0;
+}
