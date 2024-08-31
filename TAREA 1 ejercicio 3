@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float prom = 0 ;
+   int valor ;
+   cout<< "Ingrese el primer valor:";
+   cin>>valor;
+   prom=prom+valor;
+   cout<< "Ingrese el segundo  valor:";
+   cin>>valor;
+   prom=prom+valor;
+   cout<< "Ingrese el tercero valor:";
+   cin>>valor;
+   prom=prom+valor;
+   cout<< "Ingrese el cuarto valor:";
+   cin>>valor;
+   prom=prom+valor;
+   cout<< "Ingrese el quinto valor:";
+   cin>>valor;
+   prom=prom+valor;
+   cout<< " el promedio es de :"<< prom / 5.0;
+   
+    return 0 ;
+}
