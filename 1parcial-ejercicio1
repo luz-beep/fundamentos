@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std ;
+int main()
+
+{
+    float A,B,L,X,Y,Z, TOTAL ;
+    
+    cout<< "ingres la cantidad de gasolina: ";
+    cin>>A; 
+    cout<<"ingrese la cantidad de diesel :";
+    cin>>B;
+    cout<< "ingrese la cantidad de etnol:";
+    cin>> L ;
+    X=A*3.50;
+    Y=B*4 ;
+    Z= L*2.50;
+    TOTAL= X+Y+Z;
+    cout<< "EL TOTAL ES :"<<TOTAL<< endl;
+   
+
+    return 0;
+}
