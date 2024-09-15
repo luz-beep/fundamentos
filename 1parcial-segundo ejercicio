@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    float a, s;
+    cout<<"Ingrese la cantidad de años que tiene una cuenta activa: ";
+    cin>>a;
+    cout<<"Ingrese la cantidad de saldo promedio de su cuenta: ";
+    cin>>s;
+    if ((a>3)&&(s>5000)) {
+        cout<<"La tasa el del 3%";
+        
+    }else 
+    if ((a>3)&&(s<5000)) {
+        cout<<"La tasa es del 2%";
+        
+    }else
+    if ((a<3)&&(s>5000)) {
+        cout<<"La tasa es del 2.5%";
+     
+    }
+    else 
+    cout<<"La tasa es del 1.5%";
+    
+    return 0;
+}
