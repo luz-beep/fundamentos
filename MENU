@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int opcion ;
+    int r ; // case 1
+    string nombre;
+    int t,h,s,d,s1; // case 2
+    int n,suma,i; // case 3 
+
+    do {
+        cout << "MENU" <<endl ;
+        cout<< "===" <<endl;
+        cout<< "1.Area y longitud de una circuferencia "<< endl;
+        cout<< "2.Sueldo "<< endl;
+        cout<< "3.Suma de numeros impares "<< endl;
+        cout<< "0.  "<< endl;
+        cout<< "ingrese la opcion que desea : " ;
+        cin>> opcion;
+        switch (opcion){
+            case 1:
+                {
+                  cout<<" ingrese el radio : ";
+                  cin>> r ;
+                  cout<< "El area es : "<< 3.141516*r*r<< endl;
+                  cout << "La longitud es : "<< 2*3.141516*r<< endl; 
+                 break;
+                }
+            case 2 :
+            {
+             cout<<"cual es tu nombre : ";
+             cin>> nombre; 
+             cout<<"cuantas horas trabajas al mes:";
+             cin>>t;
+             cout<<"cuanto cobras por hora : ";
+             cin >> h ;
+             s=t*h ;
+             if (0>8272) 
+                 {  
+                     d=s*13/100 ;
+                     s1=s-d;
+                     cout<<s1 ;
+                }
+                else  
+                {
+                 cout << "su sueldo es : " <<s <<endl ;
+                }
+                 
+                        break;
+                        }
+            case 3 :
+            {
+                cout<<"Ingresar el numero: ";
+                cin>>n;
+                i=1;
+                suma=0 ;
+                while (i<=n)
+                {
+                      suma=suma+i;
+                      i=i+2;
+                }
+                cout << "la suma es :"<< suma;
+                 break;
+            }     
+            case 0  : cout << "salir" << endl;
+            default : cout << " opcion invalida"<< endl;
+            
+        }
+    } while (opcion !=0) ;
+   
+    return 0;
+ }
