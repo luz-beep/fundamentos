@@ -1,0 +1,90 @@
+//luz chipana 
+#include <iostream>
+#include <string>
+
+using namespace std;
+float areacuadrado(float l);
+bool sipuedevotar(int edad);
+bool esPalindromo(string palabra);
+
+
+int main()
+
+{
+	string lapalabra;
+    int edad,opcion ;
+	float lado ;
+  do { 
+	cout << "\t MENU" << endl;
+	cout << "1.Area del cuadrado"<<endl;
+	cout << "2.Puede votar " << endl;
+	cout << "3.Palindromo" << endl;
+	cout << "0.Salir " << endl;
+	cout << "Ingrese la opcion : ";
+	cin >> opcion;
+	
+	switch (opcion) {
+    case 1:
+        do 
+        {
+            cout << "Ingrese el lado:";
+            cin>> lado ;
+	    }while(lado<=0);
+	     cout<<"El area del cuadrado es : "<<areacuadrado(lado)<< endl;
+	     break;
+	     
+     case 2:
+	     do {
+	         cout<<"Ingrese la edad : ";
+	         cin >> edad ;
+    	}while (edad<=0);
+	     if (sipuedevotar(edad))
+	        cout << "Puede votar "<<endl ;
+    	else
+	        cout<<"No puede votar "<<endl ;
+	    break;
+	    
+     case 3:
+	      cout << "Ingrese la palabra : ";
+    	  cin.ignore(1,'\n');
+	      getline(cin, lapalabra);
+	      if (esPalindromo(lapalabra))
+	          cout<<"Es palindromo"<< endl ;
+	     else 
+	          cout<<"No es palindromo"<< endl ;
+	   break;
+	   
+     case 0 :
+       cout <<"Salir "<<endl;
+	   break ;
+	   
+	default :
+	     cout << "error"<<endl;
+	}
+    }while (opcion!=0);
+    
+  return 0;
+}
+
+ float areacuadrado (float l){
+     return l*l;
+ }
+ 
+ bool sipuedevotar(int edad){
+     if(edad>=18){
+            return true;
+     }else{ 
+            return false;
+     }    
+ }
+	bool esPalindromo(string palabra) {
+	bool es = true;
+	int longitud = palabra.length();
+	for (int i=0 ; i< longitud / 2 ; i =i+1)
+		if (palabra.at(i) != palabra.at(longitud - i - 1))
+		{
+		   es=false ;
+		   return es ;
+		}
+	return es;
+}
