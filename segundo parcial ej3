@@ -1,0 +1,29 @@
+#include <iostream>
+ using namespace std ;
+  
+  int main ()
+{
+    int  maquinas ;
+    do {
+    cout << "introduzca el numero de maquinas: ";
+    cin >>  maquinas ;
+    }while(maquinas<0);
+     float h1[maquinas],t=0;
+     int a=1 ;
+    do {
+        cout<< " maquina  "<< a << ":"  ;
+        cin>> h1[a] ;
+        t=t+h1[a]; 
+        a=a+1;
+        }while(a<=maquinas);
+        
+        a=1;
+        
+        do{
+         float p=(h1[a]*100)/t;
+         a=a+1;
+        cout<<"porcetaje de horas de la maquina "<<a<<":"<<p<<"%"<<endl;
+    }while (a<=maquinas);
+          cout<<"total de horas "<<t;
+      return 0;
+}
