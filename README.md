@@ -1,17 +1,21 @@
 #include <iostream>
 using namespace std;
 
+int calcular(int n);
+
 int main()
 {
-	int n,multi;
-	do {
-		cout << "Ingresar un numero del 1 al 10: ";
-		cin >> n;
-	} while (n < 1 || n>10);
-	cout << "La tabla de multiplicar de " << n << "  es:  "<<endl;
-	for (int i = 1; i <= 10; i++) {
-		multi = i * n;
-		cout << i<<"x"<<n<< "=" << multi << endl;
+	int n, suma;
+	cout << "Ingrese el numero hasta el que desee sumar: ";
+	cin >> n;
+	suma = calcular(n);
+	cout << "La suma de los numeros es  " << n << " es: " << suma;
+}
+int calcular(int n) {
+	int s = 0, i = 1;
+	while (i <= n) {
+		s=s+i;
+		i++;
 	}
-	return 0 ;
+	return s;
 }
