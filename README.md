@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n,multi;
+	do {
+		cout << "Ingresar un numero del 1 al 10: ";
+		cin >> n;
+	} while (n < 1 || n>10);
+	cout << "La tabla de multiplicar de " << n << "  es:  "<<endl;
+	for (int i = 1; i <= 10; i++) {
+		multi = i * n;
+		cout << i<<"x"<<n<< "=" << multi << endl;
+	}
+	return 0 ;
+}
