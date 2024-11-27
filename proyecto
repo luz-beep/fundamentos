@@ -1,0 +1,68 @@
+#include <iostream>
+
+#include <fstream>
+
+using namespace std;
+
+
+void registrarUsoAgua(float litros);
+void mostrarEstadisticas();
+
+int main() {
+    int opcion;
+    do {
+        cout << "Estadísticas de Uso\n";
+        cout << "1. Registrar uso de agua\n";
+        cout << "2. Mostrar estadísticas\n";
+        cout << "3. Salir\n";
+        cout << "Elige una opción: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1: {
+                float litros;
+                cout << "Ingresa la cantidad de litros utilizados: ";
+                cin >> litros;
+                registrarUsoAgua(litros);
+                break;
+            }
+            case 2:
+                mostrarEstadisticas();
+                break;
+            case 3:
+                cout << "Saliendo del programa.\n";
+                break;
+            default:
+                cout << "Opción no válida. Intenta de nuevo.\n";
+        }
+    } while (opcion != 3);
+
+    return 0;
+}
+void registrarUsoAgua(float litros) {
+    ofstream archivo("estadisticas.txt", ios::app); 
+        if (archivo.is_open()){
+        archivo << litros << endl; 
+        archivo.close();
+        cout << "Se registraron " << litros << " litros en el archivo." << endl;
+    } else {
+        cout << "Error al abrir el archivo para registrar datos." << endl;
+    }
+}
+
+
+void mostrarEstadisticas() {
+    ifstream archivo("estadisticas.txt");
+    if (archivo.is_open()) {
+        float litros, total = 0;
+        cout << "\nLitros utilizados:\n";
+        while (archivo >> litros) { 
+            cout << litros << " litros" << endl;
+            total += litros;
+        }
+        archivo.close();
+        cout << "\nTotal de agua utilizada: " << total << " litros\n";
+    } else {
+        cout << "No se pudo abrir el archivo .\n";
+    }
+}
